@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>渐变色</title>
+		<style type="text/css">
+			div{
+				left: 100px;
+				top: 100px;
+				width: 200px;
+				height: 200px;
+				/* background: linear-gradient(to right,yellow,red); */
+				/* background: radial-gradient(at center,red,yellow); */
+				
+				/* background: url(1.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: red;
+				background-position: center;
+				background-origin: padding-box;
+				background-clip: content-box;
+				border: 27px solid red;
+				border-image: url(1.jpg) 27 fi / 27px / 0px round; */
+				/*
+				background-position: center;
+				border: 27px solid red;
+				border-image: url(2.png) 27 fill / 27px / 0px stretch;
+				*/
+				transition: transform 2s;
+				transform-origin: bottom right;
+				/* transition: left 10s linear 0s; */
+				transform: translate(-50%,-50%);
+			}
+			
+			div:active{
+				transform: rotate(90deg);
+				
+			}
+		</style>
+	</head>
+	<body>
+
+		<div>
+			1、《长恨歌》
+汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。天生丽质难自弃，一朝选在君王侧。回眸...
+	
+	2、《琵琶行》
+浔阳江头夜送客，枫叶荻花秋瑟瑟。主人下马客在船，举酒欲饮无管弦。醉不成欢惨将别，别时茫茫江浸月。忽闻...
+
+		</div>
+	</body>
+</html>

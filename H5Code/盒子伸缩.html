@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>盒子伸缩</title>
+		<style type="text/css">
+			.father {
+				width: 1000px;
+				height: 400px;
+				background-color: aliceblue;
+				display: flex;
+				justify-content: space-around;
+				flex-flow: column wrap; 
+				align-items: flex-end;
+				
+			}
+			
+			.child{
+				width: 180px;
+				height: 180px;
+				background-color: red;
+			}
+			
+			#a{
+				background-color: aqua;
+
+			}
+			
+			#b{
+				background-color: antiquewhite;
+				align-self: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child" id="a"></div>
+			<div class="child" id="b"></div>
+			<!-- <div class="child" id="c"></div> -->
+		</div>
+	</body>
+</html>
