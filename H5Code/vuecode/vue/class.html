@@ -5,28 +5,39 @@
 <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
 </head>
 <style>
-.class{
+.color{
   background: #444;
   color: #eee;
 }
+
+.thin{
+	font-weight: 300;
+}
+
+.size{
+	font-size: 20px;
+}
+
 </style>
 <body>
 <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
 
 <div id="app">
-  <label for="r1">修改颜色</label><input type="checkbox" v-model="selected" id="r1">
-  <br><br>
-  <div :class="{'class': selected}">
-		大多数的说法
-  </div>
+  <p :class="['color','thin']">hahaha</p>
+  <p :class="{color:true,thin:false ,size:true}">带娃多久啊我觉得</p>
+  <p :style="{'color':'red','font-size':'20px'}"> 登极大典撒娇多久啊说</p>
+  <p :style="[classStyle,classStyle1]"> 可打开开发开放看</p>
 </div>
+  
+
 	
 <script>
 new Vue({
 	el: '#app',
-  data:{
-  	selected: true
-  }
+	data:{
+		classStyle:{'color':'red','font-size':'20px'},
+		classStyle1:{'background':'#222','font-weight':'200'}
+	}
 });
 </script>
 </body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>v-for</title>
+	</head>
+	<body>
+		<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+		<ul id="app">
+			<li v-for="(item,i) in list">{{'data='+item+'  index='+i}}</li>
+			<p v-for="i in 10">{{i}}</p>
+			<p v-for="(val,key,i) in userInfo">{{val+key+i}}</p>
+		</ul>
+		
+		<script type="text/javascript">
+			new Vue({
+				el:'#app',
+				data:{
+					list:[10,20,30,40,50],
+					userInfo:{name:"张三",age:20,sex:"男"}
+				}
+			})
+		</script>
+		
+	</body>
+</html>

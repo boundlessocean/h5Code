@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>vueFilter</title>
+	</head>
+	<body>
+		<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+		<div id="app">
+			<p>{{msg | msgFormat(key) | msgHeader(header)}}</p>	
+			<p>{{date | dateFmt}}</p>
+		</div>
+		
+		
+		<script type="text/javascript">
+			
+			
+			Vue.filter('msgFormat',function(msg,keyWords){
+				return msg.replace(keyWords,"电脑")
+			})
+			
+			Vue.filter('msgHeader',function(msg,header){
+				return header + msg
+			})
+			
+			new Vue({
+				el:"#app",
+				data:{
+					msg:"虽然文件上提示保存后即可生效，但是我在实际使用中发现并未生效，不要急，我们只需要重启一下Hbuilder就可以了。重启后，我们在来使用这些指令，只要输入触发的字符串就会出现提示了",
+					key:"文件",
+					header:"boundless",
+					date:new Date()
+				},
+				filters:{
+					dateFmt : function(date){
+						var dateNo = new Date(date)
+						var y = dateNo.getFullYear()
+						var m = (dateNo.getMonth() + 1).toString().padStart(2,'0')
+						var d = dateNo.getDate()
+						return `${y}-${m}-${d}`
+					} 
+				}
+			})
+			
+		</script>
+	</body>
+</html>
